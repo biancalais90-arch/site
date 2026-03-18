@@ -1,138 +1,344 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Portifolio</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        margin: 0;
+        background: #f4f4f4;
+      }
+
+      header {
+        background: #6a0dad;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      nav ul li {
+        display: inline;
+        margin: 10px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      h2 {
+        color: #6a0dad;
+        text-align: center;
+      }
+      #sobre {
+        text-align: center;
+      }
+      img {
+        width: 150px;
+        border-radius: 50%;
+      }
+
+      aside {
+        margin-top: 20px;
+        text-align: left;
+        max-width: 300px;
+      }
+
+      .projetos {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .card {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        width: 250px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #6a0dad;
+        color: white;
+        margin-top: 20px;
+      }
+
+      .address {
+        color: pink;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background: #6a0dad;
+        color: white;
+      }
+
+      tr:hover {
+        background: #f1f1f1;
+      }
+
+      .newsletter {
+        margin-top: 15px;
+      }
+
+      .tabuleiro {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        gap: 10px;
+      }
+      .celula {
+        display: flex;
+        background-color: #e9dddd;
+        width: 100px;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        font-size: 46px;
+        cursor: pointer;
+      }
+      #botaoReniciar {
+        margin-top: 20px;
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
     <header>
-        <h1>Bianca</h1>
-        <nav> <!--  Seção de navegação do site. -->
-            <ul><!-- Lista não ordenada para links do nosso menu-->
-                <li><a href="#sobre"> Sobre mim</a></li>
-                <li><a href="#projetos"> Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-                 <li><a href="https://google.com.br/" target="_blank">Google</a></li>
-               <!-- <li>Sobre mimi</li>-->
-        </ul> 
-     </nav>
-        
+      <h1>Bianca Lais da Silva Marquês</h1>
+      <nav>
+        <!--  Seção de navegação do site. -->
+        <ul>
+          <!-- Lista não ordenada para links do nosso menu-->
+          <li><a href="#sobre"> Sobre mim</a></li>
+          <li><a href="#projetos"> Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="https://google.com.br/" target="_blank">Google</a></li>
+          <!-- <li>Sobre mim</li>-->
+        </ul>
+      </nav>
     </header>
     <section id="sobre">
-        <h2>Sobre mim</h2>
-        <img src="WhatsApp Image 2026-03-09 at 23.08.44.jpeg" alt="imagem de foto de perfil"title="imagem de perfil de Bianca">
-        <article>
-            <p>
-                Olá! sou Bianca, sou dona de casa e estudante de html, adicionado mais um texto.
-            </p>
-        </article>
-        <aside>
-            <h3>Habilidades</h3>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
-        </aside>
+      <h2>Sobre mim</h2>
+      <img
+        src="WhatsApp Image 2026-03-09 at 23.08.44.jpeg"
+        alt="imagem de foto de perfil"
+        title="imagem de perfil de Bianca"
+      />
+      <article>
+        <p>
+          Olá! sou Bianca, sou dona de casa e estudante de HTML,CSS, JavaScript.
+        </p>
+      </article>
+      <aside>
+        <h3>Habilidades</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </aside>
     </section>
-    
 
-    <section id="projetos">
-         <h2>Projetos</h2>
+    <h2>Projetos</h2>
 
-         <article>
-            <h3>Portfólio</h3>
+    <section id="projetos" class="projetos">
+      <div class="card">
+        <h3>Calculadora de Desconto</h3>
+        <p>Calculadora simples feita em HTML e JavaScript.</p>
+        <p><strong>Tecnologias:</strong> HTML,JavaScript</p>
+        <a href="#calculadora">Ver projeto</a>
+      </div>
 
-            <p>
-                Este foi o primeiro que desenvolvido, estudando front-end.
-            </p>
+      <div class="card">
+        <h3>Formulário de Cadastro</h3>
+        <p>Aplicação para adicionar cadastro.</p>
+        <p><strong>Tecnologias:</strong> HTML, JavaScript</p>
+        <a href="#cadastro">Ver projeto</a>
+      </div>
 
-            </article>
-
+      <div class="card">
+        <h3>Jogo da Velha</h3>
+        <p>Jogo interativo com lógica em JavaScript.</p>
+        <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript</p>
+        <a href="#jogodavelha">Ver projeto</a>
+      </div>
     </section>
 
     <section id="habilidades">
+      <h2>Habilidades e tecnologias</h2>
 
-        <h2>Habilidades e tecnologias</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>tecnologias</th>
+            <th>Nivel</th>
+            <th>Descrição</th>
+          </tr>
+        </thead>
 
-        <table>
+        <tbody>
+          <tr>
+            <td>HTML</td>
+            <td>Iniciante</td>
+            <td>
+              Capaz de construir estruturas de páginas web senanticas e
+              responsivas.
+            </td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+            <td>Básico</td>
+            <td>Experiencia com flexbox, grid e animaçães CSS</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>Básico</td>
+            <td>desenvolvimento de scripts cliente para interações.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-<thead>
-<tr>
-    <th>tecnologias</th>
-    <th>Nivel</th>
-    <th>Descrição</th>
-</tr>
+    <section id="calculadora">
+      <h1>Calculadora de Desconto</h1>
+      <p>Digite o preço do produto e a porcentagem de desconto</p>
 
-</thead>
- 
- <tbody>
+      <label>Preço do produto:</label>
+      <input type="text" id="preco" placeholder="Coloque o Preço" />
 
-    <tr>
+      <br /><br />
 
-        <td>HTML</td>
-        <td>Iniciante</td>
-        <td>Capaz de construir estruturas de páginas web senanticas e responsivas.</td>
+      <label>Desconto (%):</label>
+      <input type="text" id="desconto" placeholder="valor do Desconto" />
 
-    </tr>
-<tr>
-    <td>CSS</td>
-        <td>Básico</td>
-        <td>Experiencia com flexbox, grid e animaçães CSS</td>
-</tr>
-    <tr>
-        <td>JavaScript</td>
-        <td>Básico</td>
-        <td>desenvolvimento de scripts dp çadp dp cliente para interações.</td>
-    </tr>
+      <br /><br />
 
- </tbody>
-        </table>
+      <button onclick="calcularDesconto()">Calcular</button>
 
+      <p id="resultadoCalculadora"></p>
+      <p></p>
+    </section>
+
+    <section id="cadastro">
+      <h1>Formulário de Cadastro</h1>
+
+      <label>Email:</label>
+      <input type="text" id="email" /><br /><br />
+
+      <label>Telefone:</label>
+      <input type="text" id="telefone" /><br /><br />
+
+      <label>Senha:</label>
+      <input type="password" id="senha" /><br /><br />
+
+      <button onclick="validar()">Validar</button>
+
+      <p id="resultadoCadastro"></p>
+    </section>
+
+    <section id="jogodavelha">
+      <h1>Jogo da velha</h1>
+      <div id="tabuleiro-jogo" class="tabuleiro">
+        <button class="celula"></button>
+        <button class="celula"></button>
+        <button class="celula"></button>
+        <button class="celula"></button>
+        <button class="celula"></button>
+        <button class="celula"></button>
+        <button class="celula"></button>
+        <button class="celula"></button>
+        <button class="celula"></button>
+      </div>
+      <button id="botaoReiniciar">Reiniciar o jogo</button>
     </section>
 
     <footer>
-        <p>Direitos reservador a Bianca</p>
-        <section id="contato">
-            <h2>Contato</h2>
+      <section id="contato">
+        <h2>Contato</h2>
 
-            <p>Tem um projeto em mente? Entre em contato.</p>
+        <p>Tem um projeto em mente? Entre em contato.</p>
 
-            <form action="">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required > <br>
+        <form action="">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required /> <br />
 
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required> <br>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required /> <br />
 
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" > <br>
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone" /> <br />
 
-                <label for="assunto">Assunto:</label>
-                <select name="assunto" id="assunto">
-                            <option value="orcamento">Orçamento</option>
-                            <option value="duvida">Duvida</option>
-                            <option value="outro">Outro</option>
-                        </select>
+          <label for="assunto">Assunto:</label>
+          <select name="assunto" id="assunto">
+            <option value="orcamento">Orçamento</option>
+            <option value="duvida">Duvida</option>
+            <option value="outro">Outro</option>
+          </select>
 
-                    <br>
+          <br />
 
-                        <label for="mensagem">mensagem:</label>
-                        <textarea name="mensagem" id="mensagem" cols="28" rows="5" required></textarea>
+          <label for="mensagem">mensagem:</label>
+          <textarea
+            name="mensagem"
+            id="mensagem"
+            cols="28"
+            rows="5"
+            required
+          ></textarea>
 
-                        <input type="checkbox" id="inscricao" name="inscricao">
-                        <label for="inscricao">Deseja receber minha newsletter?Fique por dentro.</label>
-                 
-                        <br>
-                        
-                        <input type="submit" value="Enviar mensagem">
-            </form>
-            <address>
-                Email: <a href="mailto:bianca.bianca@.com.br">bianca.bianca@.com.br</a><br>
-                telefone: <a href="tel:+55 990483223">+55 990483223</a>
-            </address>
-        </section>
+          <div class="newsletter">
+            <input type="checkbox" id="inscricao" name="inscricao" />
+            <label for="inscricao">
+              Deseja receber minha newsletter? Fique por dentro.
+            </label>
+          </div>
+
+          <br />
+
+          <input type="submit" value="Enviar mensagem" />
+
+          <input type="date" />
+        </form>
+        <address>
+          Email:
+          <a href="mailto:bianca.bianca@.com.br" class="address"
+            >bianca.bianca@.com.br</a
+          ><br />
+          telefone:
+          <a href="tel:+55 990483223" class="address">+55 990483223</a>
+        </address>
+      </section>
+      <p>&copy; Direitos reservador a Bianca 2026</p>
     </footer>
-</body>
+    <script src="projetos.js"></script>
+  </body>
 </html>
